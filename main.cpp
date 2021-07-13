@@ -13,6 +13,8 @@ using namespace std;
 
 void main()
 {
+	// write a tutorial and description of how to user this program
+	// 
 	// 1) seller* head_of_sellers_list
 	// 2) buyer* head_of_buyers_list          // there is 3 linked list of nodes, made of classes ( sellers, buyers, product)
 	// 3) product* head_of_products_list

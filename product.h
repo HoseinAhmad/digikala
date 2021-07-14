@@ -20,6 +20,8 @@ public:
 	void setdescription(string Description);
 	void setscore(int Score);
 	void setcomments(string Comment);
+
+	string givename();
 };
 
 #endif // !class_product_H

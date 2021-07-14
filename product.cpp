@@ -22,3 +22,6 @@ product::setcomments(string Comment) {
 	comments[size] = new string();
 	comments[size] = Comment;
 }
+product::givename() {
+	return name;
+}

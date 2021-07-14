@@ -13,6 +13,6 @@ seller::setproduct(product Product) {
 	products[size] = new product();
 	products[size] = Product;
 }
-
-
-//write defenition of functions
+seller::give_username() {
+	return give_username();
+}

@@ -1,5 +1,9 @@
 #include<iostream>
 #include<string>
-#include"user.h"
 
-//write defenition of functions
+#include"user.h"
+#include"buyer.h"
+
+buyer::give_Username() {
+	return give_username;
+}

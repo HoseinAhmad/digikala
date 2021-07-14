@@ -14,6 +14,7 @@ public:
 	void setwallet(float Wallet);
 	void setaddress(string Address);
 	void setphone(int Phone);
+	string give_username();
 };
 
 #endif // !class_user_H

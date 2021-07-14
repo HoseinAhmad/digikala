@@ -11,6 +11,7 @@ private:
 public:
 	void setusername(string Username);
 	void setpassword(string Password);
+	string give_username();
 };
 
 #endif // !class_person_H

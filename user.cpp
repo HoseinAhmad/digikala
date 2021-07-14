@@ -12,3 +12,6 @@ user::setaddress(string Address) {
 user::setphone(int Phone) {
 	phone = Phone;
 }
+user::give_username() {
+	return give_username();
+}

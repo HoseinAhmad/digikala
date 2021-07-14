@@ -8,3 +8,6 @@ person::setusername(string Username) {
 person::setpassword(string Password) {
 	password = Password;
 }
+person::give_username() {
+	return username;
+}

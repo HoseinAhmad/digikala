@@ -144,3 +144,31 @@ void delet_product_node(product* &head) {
 	cout << "ERORR: there is no such a word in the list ! enter new order" << endl;
 	return;
 }
+bool is_in_list(seller* head_list, string username) {
+	seller* temp = new seller();
+	temp = head;
+
+	while (temp != NULL)
+	{
+		if (strcmp(temp->give_username, username) == 0)
+		{
+			return true;
+		}
+		temp = temp->next;
+	}
+	return false;
+}
+void is_in_list(buyer* head, string username) {
+	buyer* temp = new buyer();
+	temp = head;
+
+	while (temp != NULL)
+	{
+		if (strcmp(temp->give_Username, username) == 0)
+		{
+			return true;
+		}
+		temp = temp->next;
+	}
+	return false;
+}

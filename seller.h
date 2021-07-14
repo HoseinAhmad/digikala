@@ -14,6 +14,7 @@ public:
 	seller* next;
 	void setname(string Name);
 	void setproduct(product Product);
+	string give_username();
 	
 };
 

@@ -1,4 +1,9 @@
 #include<iostream>
-#inlucde "discountCode.h"
+#include"discoundCode.h"
 
-// defentions of functions
+discountCode::setrate(float Rate) {
+	rate = Rate;
+}
+discountCode::setidcode(float Idcode) {
+	idcode = Idcode;
+}

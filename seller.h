@@ -9,10 +9,11 @@ using namespace std;
 class seller :public user {
 private:
 	string name;
-	product products;
+	product* products;
 public:
 	seller* next;
 	void setname(string Name);
+	void setproduct(product Product);
 	
 };
 

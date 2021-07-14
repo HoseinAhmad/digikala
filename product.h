@@ -9,13 +9,17 @@ privete:
 	string name;
 	float price;
 	int number;
-	string Description;
+	string description;
 	int score;
 	string** comments;
 public:
 	product* next;
-
-	//write funcs
+	void setname(string Name);
+	void setprice(float Price);
+	void setnumber(int Number);
+	void setdescription(string Description);
+	void setscore(int Score);
+	void setcomments(string Comment);
 };
 
 #endif // !class_product_H

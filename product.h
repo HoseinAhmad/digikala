@@ -2,6 +2,8 @@
 #define class_product_H
 #include "product.h"
 
+using namespace std;
+
 class product {
 privete:
 	string name;
@@ -11,6 +13,8 @@ privete:
 	int score;
 	string** comments;
 public:
+	product* next;
+
 	//write funcs
 };
 

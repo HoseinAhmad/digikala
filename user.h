@@ -3,13 +3,17 @@
 #include "user.h"
 #include "person.h"
 
+using namespace std;
+
 class user : public person{
 private:
 	float wallet;
 	string address;
 	int phone;
 public:
-	//write funcs
+	void setwallet(float Wallet);
+	void setaddress(string Address);
+	void setphone(int Phone);
 };
 
 #endif // !class_user_H

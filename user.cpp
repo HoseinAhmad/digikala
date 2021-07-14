@@ -3,4 +3,12 @@
 #include"person.h"
 #include"user.h"
 
-//write defenition of functions
+user::setwallet(float Wallet) {
+	wallet = Wallet;
+}
+user::setaddress(string Address) {
+	address = Address;
+}
+user::setphone(int Phone) {
+	phone = Phone;
+}

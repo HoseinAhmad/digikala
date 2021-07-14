@@ -2,4 +2,9 @@
 #include<string>
 #include"person.h"
 
-//write defenition of functions
+person::setusername(string Username) {
+	username = Username;
+}
+person::setpassword(string Password) {
+	password = Password;
+}

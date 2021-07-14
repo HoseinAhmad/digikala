@@ -2,12 +2,15 @@
 #define class_person_H
 #include "person.h"
 
+using namespace std;
+
 class person {
 private:
 	string username;
 	string password;
 public:
-	//write functions
+	void setusername(string Username);
+	void setpassword(string Password);
 };
 
 #endif // !class_person_H

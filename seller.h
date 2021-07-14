@@ -4,12 +4,16 @@
 #include"product.h"
 #include"seller.h"
 
+using namespace std;
+
 class seller :public user {
 private:
 	string name;
 	product products;
 public:
-	// write functions
+	seller* next;
+	void setname(string Name);
+	
 };
 
 #endif // !class_buyer

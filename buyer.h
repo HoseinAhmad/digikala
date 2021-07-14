@@ -6,6 +6,7 @@
 class buyer :public user {
 
 public:
+	buyer* next;
 	// write functions
 };
 

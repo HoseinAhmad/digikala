@@ -2,26 +2,26 @@
 #include<string>
 #include "product.h"
 
-product::setname(string Name) {
+void product::setname(string Name) {
 	name = Name;
 }
-product::setprice(float Price) {
+void product::setprice(float Price) {
 	price = Price;
 }
-product::setnumber(int Number) {
+void product::setnumber(int Number) {
 	number = Number;
 }
-product::setdescription(string Description) {
+void product::setdescription(string Description) {
 	description = Description;
 }
-product::setscore(int Score) {
+void product::setscore(int Score) {
 	score = Score;
 }
-product::setcomments(string Comment) {
+void product::setcomments(string Comment) {
 	int size = sizeof(comments); // the last index witch is empty
 	comments[size] = new string();
-	comments[size] = Comment;
+	*(comments[size]) = Comment;
 }
-product::givename() {
+string product::givename() {
 	return name;
 }

@@ -36,62 +36,88 @@ void main()
 		{
 			while (true)
 			{
+				int res;
 				// get role user and pass
-				cout << "write <return> if you want to back to preveus step;
+				cout << "write <return> if you want to back to preveus step \n";
 				cout << "enter your role" << endl;
 				string role;
 				cin >> role;
-				if (strcmp(role, "return") == 0)	continue;
+				res = role.compare("return");
+				if (res == 0)	break;
+
 				cout << "enter your username \n";
 				string username;
 				cin >> username;
-				if (strcmp(username, "return") == 0)	continue;
+				res = username.compare("return");
+				if (res == 0)	break;
+
 				cout << "enter your password \n";
 				string password;
 				cin >> password;
-				if (strcmp(password, "return") == 0)	continue;
+				res = password.compare("return");
+				if (res == 0)	break;
+
 				cout << "enter your address \n";
 				string address;
 				cin >> address;
-				if (strcmp(password, "return") == 0)	continue;
+				res = address.compare("return");
+				if (res == 0)	break;
+
 				cout << "enter your phone \n";
 				string phone;
 				cin >> phone;
-				if (strcmp(password, "return") == 0)	continue;
+				int intphone = stoi(phone);
+				res = phone.compare("return");
+				if (res == 0)	break;
+
+				cout << "enter your name ( if you are seller) \n";
+				string name;
+				cin >> name;
+				res = name.compare("return");
+				if (res == 0)	break;
 
 				//  check the role is corect and if there is a simillar user in the list or not:
-				if (strcmp(role, "buyer") == 0)
+				res = role.compare("buyer");
+				if (res == 0)
 				{
-					if (is_in_list(head_of_buyers_list, username)) {
-						cout << "the username is invalid try another \n"
-							continue;
-					}
-					else {
-						add_buyer_node(head_of_buyers_list, username, password, address, <int>phone);
-						cout << "you signed up seccesfully \n";
-						break;
-					}
-				}
-				else if (strcmp(role, "seller") == 0)
-				{
-					if (is_in_list(head_of_sellers_list, username)) {
+					if (is_in_buyerlist(head_of_buyers_list, username)) {
 						cout << "the username is invalid try another \n";
 						continue;
 					}
 					else {
-						add_seller_node(head_of_sellers_list, username, password, address, <int>phone);
+						add_buyer_node(head_of_buyers_list, username, password, address, intphone);
 						cout << "you signed up seccesfully \n";
 						break;
 					}
 				}
-				else {
-					cout << "the role you entred is incorect try again:\n";
-					continue;
+				else
+				{
+					res = role.compare("seller");
+					if (res == 0)
+					{
+						if (is_in_sellerlist(head_of_sellers_list, username)) {
+							cout << "the username is invalid try another \n";
+							continue;
+						}
+						else {
+							add_seller_node(head_of_sellers_list, name, username, password, address, intphone);
+							cout << "you signed up seccesfully \n";
+							break;
+						}
+					}
+					else {
+						cout << "the role you entred is incorect try again:\n";
+						continue;
+					}
 				}
+
 			}
+			continue;
 		}
 		if (order == 2)
 		{
+			cout << "not completed\n";
+			continue;
 			//  What is your type of user? 1- admin 2- buyer 3-seller 4-close the program
 			if (1)
 			{
@@ -99,17 +125,17 @@ void main()
 				// if user entered exit then break;
 				// else:
 				// 2) check user pass of admin
-				if (/*there is no matches*/) {
+				//if (/*there is no matches*/) {
 					//print ERROR : username or password is inccorect 
-					continue;
-				}
+				//	continue;
+				//}
 				// 3) print you loged in sucssesfully
 				while (true) // loop of admin
 				{
 					// 4) show the list of options with number assigned to them
 					// 5) ask what does user want and get the number of it
 					// 6) write the ifs and do the order of each if with a function  
-					
+
 				}
 			}
 			if (2)
@@ -118,10 +144,10 @@ void main()
 				// // if user entered exit then break;
 				// else:
 				// 2) check user and pass of buyers in the list
-				if (/*there is no matches*/) {
+				//if (/*there is no matches*/) {
 					//print ERROR : username or password is inccorect 
-					continue;
-				}
+					//continue;
+				//}
 				// 3) print you loged in sucssesfully
 				while (true) // loop of buyer
 				{
@@ -137,10 +163,10 @@ void main()
 				// // if user entered exit then break;
 				// else:
 				// 2) check the list, if there is user with with these user and pass
-				if (/*there is*/) {
+				//if (/*there is*/) {
 					//print ERROR : username or password is inccorect 
-					continue;
-				}
+					//continue;
+				//}
 				// 3) print you loged in sucssesfully
 				while (true) // loop of seller
 				{
@@ -153,7 +179,7 @@ void main()
 			}
 			if (4) break;
 		}
-		if (order == 3) break;	
+		if (order == 3) break;
 		cout << "enterd number is invalid pleat try again " << endl;
 	}
 	return;

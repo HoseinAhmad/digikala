@@ -2,12 +2,12 @@
 #include<string>
 #include"person.h"
 
-person::setusername(string Username) {
+void person::setusername(string Username) {
 	username = Username;
 }
-person::setpassword(string Password) {
+void person::setpassword(string Password) {
 	password = Password;
 }
-person::give_username() {
+string person::give_username() {
 	return username;
 }

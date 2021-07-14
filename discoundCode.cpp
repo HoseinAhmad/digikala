@@ -1,9 +1,9 @@
 #include<iostream>
 #include"discoundCode.h"
 
-discountCode::setrate(float Rate) {
+void discountCode::setrate(float Rate) {
 	rate = Rate;
 }
-discountCode::setidcode(float Idcode) {
+void discountCode::setidcode(float Idcode) {
 	idcode = Idcode;
 }

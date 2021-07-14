@@ -15,7 +15,7 @@ public:
 	void setname(string Name);
 	void setproduct(product Product);
 	string give_username();
-	
+
 };
 
 #endif // !class_buyer

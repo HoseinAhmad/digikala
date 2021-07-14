@@ -1,8 +1,9 @@
 #include<iostream>
 #include<string>
 #include "linkedlist.h"
+#include"product.h"
 
-void add_seller_node(seller* head,string name, string username,string password,string address,int phone)
+void add_seller_node(seller* head, string name, string username, string password, string address, int phone)
 {
 	// insert it to the end of list
 	seller* curr = new seller();
@@ -89,7 +90,7 @@ void add_product_node(product* head, string name, float price, int number, strin
 		{
 			if (curr->next == NULL)
 			{
-				curr->next = new buyer();
+				curr->next = new product();
 				curr->next->setname(name);
 				curr->next->setprice(price);
 				curr->next->setnumber(number);
@@ -102,17 +103,24 @@ void add_product_node(product* head, string name, float price, int number, strin
 		}
 	}
 }
-void delet_product_node(product* &head) {
+void delet_product_node(product* head) {
 
 	cout << "enter the name of product you want to delet : " << endl;
 	string deleted_product;
 	cin >> deleted_product;
-	product* temp = new product();
+
+	product* temp;
+	temp = new product();
 	temp = head;
+
 	product* prev = new product();
+
 	while (temp != NULL)
 	{
-		if (strcmp(temp->givename, deleted_word) == 0)
+		int res;
+		string name = temp->givename();
+		res = name.compare(deleted_product);
+		if (res == 0)
 		{
 			head = head->next;
 			cout << "deleted !" << endl;
@@ -123,7 +131,7 @@ void delet_product_node(product* &head) {
 		// need to change 'prev->next' */
 		else
 		{
-			while (temp != NULL && temp->givename != deleted_word)
+			while (temp != NULL && res != 0)
 			{
 				prev = temp;
 				temp = temp->next;
@@ -144,13 +152,15 @@ void delet_product_node(product* &head) {
 	cout << "ERORR: there is no such a word in the list ! enter new order" << endl;
 	return;
 }
-bool is_in_list(seller* head_list, string username) {
+bool is_in_sellerlist(seller* head, string username) {
 	seller* temp = new seller();
 	temp = head;
 
 	while (temp != NULL)
 	{
-		if (strcmp(temp->give_username, username) == 0)
+		int res;
+		res = temp->give_username().compare(username);
+		if (res == 0)
 		{
 			return true;
 		}
@@ -158,13 +168,15 @@ bool is_in_list(seller* head_list, string username) {
 	}
 	return false;
 }
-void is_in_list(buyer* head, string username) {
+bool is_in_buyerlist(buyer* head, string username) {
 	buyer* temp = new buyer();
 	temp = head;
 
 	while (temp != NULL)
 	{
-		if (strcmp(temp->give_Username, username) == 0)
+		int res;
+		res = temp->give_username().compare(username);
+		if (res == 0)
 		{
 			return true;
 		}

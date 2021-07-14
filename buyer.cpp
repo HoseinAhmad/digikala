@@ -4,6 +4,7 @@
 #include"user.h"
 #include"buyer.h"
 
-buyer::give_Username() {
-	return give_username;
+string buyer::give_Username() {
+	string username = give_username();
+	return username;
 }

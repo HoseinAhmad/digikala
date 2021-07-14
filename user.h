@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class user : public person{
+class user : public person {
 private:
 	float wallet;
 	string address;

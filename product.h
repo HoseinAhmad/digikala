@@ -5,7 +5,7 @@
 using namespace std;
 
 class product {
-privete:
+private:
 	string name;
 	float price;
 	int number;
@@ -13,6 +13,7 @@ privete:
 	int score;
 	string** comments;
 public:
+	product() {};
 	product* next;
 	void setname(string Name);
 	void setprice(float Price);
@@ -20,7 +21,6 @@ public:
 	void setdescription(string Description);
 	void setscore(int Score);
 	void setcomments(string Comment);
-
 	string givename();
 };
 
